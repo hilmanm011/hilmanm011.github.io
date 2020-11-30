@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let page = window.location.hash.substr(1);
-  if (page == "") page = "Teams";
+  if (page == " ") page = "Teams";
 
   const loadPage = (page) => {
     const xhttp = new XMLHttpRequest();
