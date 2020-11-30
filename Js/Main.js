@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let page = window.location.hash.substr(1);
-  if (page == "") page = "teams";
+  if (page == "") page = "Teams";
   const loadPage = (page) => {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (this.status == 200) {
           content.innerHTML = xhttp.responseText;
         } else if (this.status == 404) {
-          content.innerHTML = "<h1>Halaman Beranda</h1>";
+          content.innerHTML = "<h1>Halaman tidak ditemukan</h1>";
         } else {
           content.innerHTML = "<h1>Halaman tidak dapat di load</h1>";
         }
