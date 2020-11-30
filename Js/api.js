@@ -152,7 +152,7 @@ const setDataKlasmenLiga = (data) => {
                   <div class="card">
                       <div class="card-image">
                           <img src="${value.team.crestUrl}" width="150px">
-                          <a class="btn-floating btn-floating-save halfway-fab waves-effect waves-light indigo darken-3"><i data-id="${value.team.id}" data-name="${value.team.name}" data-crestUrl="${value.team.crestUrl}" class="material-icons">add</i></a>
+                          <a class="btn-floating btn-floating-save halfway-fab waves-effect waves-light orange"><i data-id="${value.team.id}" data-name="${value.team.name}" data-crestUrl="${value.team.crestUrl}" class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
                           <h6 class="black-text font-weight-bold">${value.team.name}</h6>
