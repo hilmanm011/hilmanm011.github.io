@@ -147,51 +147,52 @@ const setDataKlasmenLiga = (data) => {
   for (let index = 0; index < data.standings.length; index++) {
     let type = data.standings[index].type;
     data.standings[index].table.forEach((value) => {
-      cardHtml += `
-            <div class="col s12 m4">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="${value.team.crestUrl}" width="150px">
-                        <a class="btn-floating btn-floating-save halfway-fab waves-effect waves-light indigo darken-3"><i data-id="${value.team.id}" data-name="${value.team.name}" data-crestUrl="${value.team.crestUrl}" class="material-icons">add</i></a>
-                    </div>
-                    <div class="card-content">
-                        <h6 class="black-text font-weight-bold">${value.team.name}</h6>
-                        <br/>
-                        <b>Type : ${type}</b>
-                        <table>
-                                <tbody>
-                                <tr>
-                                    <td>Bermain</td>
-                                    <td>:</td>
-                                    <td>${value.playedGames}</td>
-                                </tr>
-                                <tr>
-                                    <td>Menang</td>
-                                    <td>:</td>
-                                    <td>${value.won}</td>
-                                </tr>
-                                <tr>
-                                    <td>Seri</td>
-                                    <td>:</td>
-                                    <td>${value.draw}</td>
-                                </tr>
-                                <tr>
-                                    <td>Kalah</td>
-                                    <td>:</td>
-                                    <td>${value.lost}</td>
-                                </tr>
-                                <tr>
-                                    <td>Poin</td>
-                                    <td>:</td>
-                                    <td>${value.points}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        `;
+        cardHtml += `
+              <div class="col s12 m4">
+                  <div class="card">
+                      <div class="card-image">
+                          <img src="${value.team.crestUrl}" width="150px">
+                          <a class="btn-floating btn-floating-save halfway-fab waves-effect waves-light indigo darken-3"><i data-id="${value.team.id}" data-name="${value.team.name}" data-crestUrl="${value.team.crestUrl}" class="material-icons">add</i></a>
+                      </div>
+                      <div class="card-content">
+                          <h6 class="black-text font-weight-bold">${value.team.name}</h6>
+                          <br/>
+                          <b>Type : ${type}</b>
+                          <table>
+                                  <tbody>
+                                  <tr>
+                                      <td>Bermain</td>
+                                      <td>:</td>
+                                      <td>${value.playedGames}</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Menang</td>
+                                      <td>:</td>
+                                      <td>${value.won}</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Seri</td>
+                                      <td>:</td>
+                                      <td>${value.draw}</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Kalah</td>
+                                      <td>:</td>
+                                      <td>${value.lost}</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Poin</td>
+                                      <td>:</td>
+                                      <td>${value.points}</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          `;
     });
+    document.getElementById('progress').style.display = 'none'
     document.getElementById("teams").innerHTML = cardHtml;
     btnSaveFunction();
   }
@@ -206,5 +207,6 @@ const setDataScore = (data) => {
       data.season.startDate
     }</td><td>${data.season.endDate}</td></tr>`;
   });
+  document.getElementById('progress').style.display = 'none'
   document.getElementById("klasmen").innerHTML = tableHTML;
 };

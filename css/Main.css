@@ -195,3 +195,12 @@ a.btn {
 .card .card-image img {
   max-height: 100px;
 }
+
+#progress {
+  background-color: #394867;
+}
+
+
+#progress .indeterminate {
+  background-color: rgb(110, 166, 212);
+}
