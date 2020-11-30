@@ -1,0 +1,197 @@
+:root {
+  --main-navy-blue: #394867;
+  --main-dark-blue: #314f8d;
+}
+
+.navy-blue {
+  background-color: var(--main-navy-blue);
+}
+
+.dark-blue {
+  background-color: var(--main-dark-blue);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-direct-column {
+  flex-direction: column;
+}
+
+.h-min-100vh {
+  min-height: 100vh;
+}
+
+.flex > nav {
+  align-items: flex-start;
+}
+
+.flex > #root {
+  align-items: center;
+  flex: 1;
+}
+
+.flex > .footer-copyright {
+  align-items: flex-end;
+}
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../Fonts/MA.woff2") format("woff2");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+nav .sidenav-trigger {
+  padding: 10px 0 0 0;
+}
+
+.flex.justify-content-center {
+  justify-content: center;
+}
+
+.flex.justify-content-end {
+  justify-content: flex-end;
+}
+
+.mt-5 {
+  margin-top: 2rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 1rem !important;
+}
+.mb-5 {
+  margin-bottom: 4rem !important;
+}
+
+.card .card-title {
+  font-weight: bold !important;
+}
+
+.card .card-image img {
+  min-height: 255px;
+}
+
+button.btn,
+a.btn {
+  background-color: #651fff !important;
+  box-shadow: #b9b1ff 0px 1px 4px 2px;
+  border-radius: 4px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.p-2 {
+  padding: 0.2rem;
+}
+
+.pb-5 {
+  padding-bottom: 2rem;
+}
+
+.text-black {
+  color: rgb(4, 33, 129);
+}
+
+.card {
+  border-radius: 5px !important;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  height: 8px;
+  margin: 5px 0px 60px 0px;
+}
+
+.box-sm {
+  height: 8px;
+  margin: 0;
+  flex-grow: 1;
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.box-sm:hover {
+  flex-grow: 12;
+}
+
+.red {
+  background-color: #ff5852;
+}
+
+.orange {
+  background-color: #ff9000;
+}
+
+.yellow {
+  background-color: #ffd300;
+}
+
+.green {
+  background-color: #3dcd49;
+}
+
+.blue {
+  background-color: #0089d7;
+}
+
+.purple {
+  background-color: #9e44c4;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.list {
+  font-weight: bold;
+}
+
+.list > li::before {
+  content: "✅ ";
+}
+
+.pl-4 {
+  margin-left: 2rem;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.btn {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.card .card-image img {
+  max-height: 100px;
+}
