@@ -31,12 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let page = window.location.hash.substr(1);
-  if (page == "") page = "teams";
+  if (page ==="") page = "Teams";
 
   const loadPage = (page) => {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
-      if (this.readyState == 4) {
+      if (this.readyState == 3) {
         const content = document.querySelector("#root");
         if (page == "Teams") {
           getDataFootball();
