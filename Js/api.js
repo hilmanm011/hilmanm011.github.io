@@ -22,7 +22,6 @@ const getDataKompetisi = (url) => {
   }).then((response) => response.json());
 };
 
-let countData = 0;
 const getDataFootball = () => {
   if ("caches" in window) {
     for (let index = 0; index < id_liga.length; index++) {
@@ -33,11 +32,9 @@ const getDataFootball = () => {
             res.json().then((data) => {
               console.log(data);
               setDataKlasmenLiga(data);
-
               getDataKompetisi(url).then((data) => {
                 setDataKlasmenLiga(data);
               });
-
               return;
             });
           }
@@ -65,25 +62,29 @@ const getDataScore = () => {
     setDataScore(data);
   });
 };
+{/* <div class="center-align"><a href="#Teams" class="waves-effect waves-light navy-blue btn-small"><i class="material-icons right">add</i>Tambahkan</a></div> */}
 
 const getSavedTeam = () => {
   cardHtml = "";
   idbase = getAllDataLove();
   idbase.then((e) => {
-    console.log(e);
-    e.forEach((item) => {
-      cardHtml += `<div class="col s12 m4">
-                  <div class="card">
-                      <div class="card-image">
-                          <img src="${item.crestUrl}" width="150px">
-                          <a class="btn-floating btn-floating-delete halfway-fab waves-effect waves-light red"><i data-id="${item.id}" data-name="${item.name}" class="material-icons">delete_forever</i></a>
-                      </div>
-                      <div class="card-content">
-                          <h6 class="black-text font-weight-bold">${item.name}</h6>
-                      </div>
-                  </div>
-              </div>`;
-    });
+    if (e== "") {
+      cardHtml += `<h5 class="center-align grey-text">Anda belum menambahkan Team Favorite</h5>`
+    } else {
+      e.forEach((item) => {
+        cardHtml += `<div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="${item.crestUrl}" width="150px">
+                            <a class="btn-floating btn-floating-delete halfway-fab waves-effect waves-light red"><i data-id="${item.id}" data-name="${item.name}" class="material-icons">delete_forever</i></a>
+                        </div>
+                        <div class="card-content">
+                            <h6 class="black-text font-weight-bold">${item.name}</h6>
+                        </div>
+                    </div>
+                </div>`;
+      });
+    }
     document.getElementById("FavoritCard").innerHTML = cardHtml;
     btnDeleteFunction();
   });
@@ -206,5 +207,4 @@ const setDataScore = (data) => {
     }</td><td>${data.season.endDate}</td></tr>`;
   });
   document.getElementById("klasmen").innerHTML = tableHTML;
-  // btnSaveFunction();
 };

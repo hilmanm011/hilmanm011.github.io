@@ -4,4 +4,4 @@ Firebase: https://mykampus-220617.web.app/
 
 by Muhamad Hilman - 2020
 
-Dicoding PWA Submission 3
+Dicoding PWA Submission 3 - Football Leauge App
