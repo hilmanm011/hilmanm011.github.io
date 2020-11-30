@@ -1,6 +1,6 @@
 Github: https://hilmanm011.github.io/
 
-Firebase: https://golang-aaf70.web.app
+Firebase: https://mykampus-220617.web.app/
 
 by Muhamad Hilman - 2020
 
