@@ -75,13 +75,6 @@ const deleteData = (id, name) => {
       .then((data) => {
         if (Notification.permission === "granted") {
           M.toast({ html: `${name} berhasil dihapus!!` })
-          navigator.serviceWorker.ready.then((regist) => {
-            regist.showNotification(`Tim ${name} berhasil dihapus!`, {
-              body: `${name} berhasil dihapus!`,
-              icon: "/Images/Icon/MS_ICON.png",
-              badge: "/Images/Favicon/ms-icon-144x144.png",
-            });
-          });
         }
         resolve(true);
         
