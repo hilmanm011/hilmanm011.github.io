@@ -98,20 +98,6 @@ const btnSaveFunction = () => {
           (status) => {
             if (status) {
               M.toast({ html: `Sudah ada di favorite!!` })
-              if (Notification.permission === "granted") {
-                navigator.serviceWorker.ready.then((regist) => {
-                  regist.showNotification(
-                    `Tim ${e.target.getAttribute("data-name")} Gagal disimpan`,
-                    {
-                      body: `${e.target.getAttribute(
-                        "data-name"
-                      )} sudah pernah di simpan`,
-                      icon: "/Images/Icon/MS_ICON.png",
-                      badge: "/Images/Favicon/ms-icon-144x144.png",
-                    }
-                  );
-                });
-              }
             } else {
               SaveFootBall({
                 id: e.target.getAttribute("data-id"),
