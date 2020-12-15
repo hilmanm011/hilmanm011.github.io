@@ -31,6 +31,7 @@ precacheAndRoute([
   { url: '/Js/db.js', revision: 2 },
   { url: '/nav.html', revision: 2 },
   { url: '/Pages/Teams.html', revision: 2 },
+  { url: '/Pages/Profile.html', revision: 2 },
   { url: '/Pages/Favorit.html', revision: 2 },
   { url: '/Pages/Klasmen.html', revision: 2 },
   { url: 'Images/Favicon/apple-icon-57x57.png', revision: 2 },
@@ -48,6 +49,8 @@ precacheAndRoute([
   { url: 'Images/Favicon/favicon-16x16.png', revision: 2 },
   { url: 'Images/Favicon/ms-icon-144x144.png', revision: 2 },
   { url: 'Images/Icon/MS_ICON.png', revision: 2 },
+  { url: 'Images/Icon/sam.jpg', revision: 2 },
+  { url: 'Images/Icon/pasfoto.jpeg', revision: 2 },
   { url: '/Fonts/MA.woff2', revision: 2 }
 ])
 
